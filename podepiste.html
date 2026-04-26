@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Podepište otevřenou výzvu iniciativy Stojíme za univerzitami a podpořte akademickou svobodu.">
+  <title>Podepište – Stojíme za univerzitami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Hlavní navigace">
+    <div class="container--wide">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">
+          <img src="assets/logo-mark.svg" alt="" aria-hidden="true" width="28" height="28">
+          Stojíme za&nbsp;univerzitami
+        </a>
+        <button class="nav__toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-list">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__list" id="nav-list">
+          <li><a href="index.html">O nás</a></li>
+          <li><a href="otevreny-dopis.html">Otevřený dopis</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="podepiste.html" class="btn btn--primary active">Podepište</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="section">
+      <div class="container">
+
+        <div class="page-header">
+          <p class="page-header__label">Petice</p>
+          <h1 class="page-header__title">Podepište výzvu</h1>
+          <p class="page-header__lead">
+            Přidejte svůj hlas k těm, kteří odmítají politické zásahy do fungování českých univerzit. Váš podpis bude předán [adresátovi výzvy].
+          </p>
+        </div>
+
+        <!-- Counter -->
+        <div class="counter">
+          <div class="counter__item">
+            <div class="counter__number">[XXX]</div>
+            <div class="counter__label">podpisů</div>
+          </div>
+          <div class="counter__item">
+            <div class="counter__number">[XX]</div>
+            <div class="counter__label">institucí</div>
+          </div>
+          <div class="counter__item">
+            <div class="counter__number">[XX]</div>
+            <div class="counter__label">měst</div>
+          </div>
+        </div>
+
+        <!-- Petition form (Netlify Forms) -->
+        <!--
+          Nasazení na Netlify: formulář je připraven pro Netlify Forms.
+          Stačí nasadit stránku na Netlify – podpisy se budou automaticky sbírat
+          v sekci Forms v Netlify dashboardu (bez dalšího kódu).
+          Bezplatný tier: 100 podpisů/měsíc. Pro větší objem zvažte Tally.so.
+        -->
+        <form
+          class="form"
+          name="podpis"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/dekujeme.html"
+        >
+          <input type="hidden" name="form-name" value="podpis">
+          <p class="visually-hidden">
+            <label>Nevyplňujte toto pole: <input name="bot-field"></label>
+          </p>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="jmeno">Jméno</label>
+              <input
+                class="form__input"
+                type="text"
+                id="jmeno"
+                name="jmeno"
+                autocomplete="given-name"
+                required
+                placeholder="Jana"
+              >
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="prijmeni">Příjmení</label>
+              <input
+                class="form__input"
+                type="text"
+                id="prijmeni"
+                name="prijmeni"
+                autocomplete="family-name"
+                required
+                placeholder="Nováková"
+              >
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="email">E-mail</label>
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="jana@example.cz"
+            >
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="instituce">
+              Instituce <span class="optional">(nepovinné)</span>
+            </label>
+            <input
+              class="form__input"
+              type="text"
+              id="instituce"
+              name="instituce"
+              placeholder="Univerzita Karlova, ČVUT, MU…"
+            >
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="role">
+              Role <span class="optional">(nepovinné)</span>
+            </label>
+            <select class="form__select" id="role" name="role">
+              <option value="">— vyberte —</option>
+              <option value="student">Student / studentka</option>
+              <option value="absolvent">Absolvent / absolventka</option>
+              <option value="akademik">Akademický pracovník / pracovnice</option>
+              <option value="jine">Jiné</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="vzkaz">
+              Vzkaz <span class="optional">(nepovinné)</span>
+            </label>
+            <textarea
+              class="form__textarea"
+              id="vzkaz"
+              name="vzkaz"
+              placeholder="Proč vám záleží na nezávislosti univerzit?"
+            ></textarea>
+          </div>
+
+          <div class="form__group">
+            <label class="form__checkbox">
+              <input type="checkbox" name="souhlas" required>
+              Souhlasím se zpracováním osobních údajů pro účely této petice. Moje jméno může být zveřejněno v seznamu signatářů. Svůj souhlas mohu kdykoli odvolat.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg form__submit">
+            Podepsat výzvu
+          </button>
+
+          <p class="form__note">
+            Váš e-mail nebude zveřejněn a nebude použit k marketingovým účelům.<br>
+            Více v <a href="kontakt.html">zásadách ochrany osobních údajů</a>.
+          </p>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container--wide">
+      <div class="footer__inner">
+        <span>© 2025 Stojíme za univerzitami</span>
+        <ul class="footer__links">
+          <li><a href="index.html">O nás</a></li>
+          <li><a href="otevreny-dopis.html">Otevřený dopis</a></li>
+          <li><a href="podepiste.html">Podepište</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const list   = document.querySelector('.nav__list');
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>

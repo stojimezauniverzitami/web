@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontaktujte iniciativu Stojíme za univerzitami.">
+  <title>Kontakt – Stojíme za univerzitami</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Hlavní navigace">
+    <div class="container--wide">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">
+          <img src="assets/logo-mark.svg" alt="" aria-hidden="true" width="28" height="28">
+          Stojíme za&nbsp;univerzitami
+        </a>
+        <button class="nav__toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-list">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__list" id="nav-list">
+          <li><a href="index.html">O nás</a></li>
+          <li><a href="otevreny-dopis.html">Otevřený dopis</a></li>
+          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+          <li><a href="podepiste.html" class="btn btn--primary">Podepište</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="section">
+      <div class="container">
+
+        <div class="page-header">
+          <p class="page-header__label">Kontakt</p>
+          <h1 class="page-header__title">Spojte se s námi</h1>
+          <p class="page-header__lead">
+            Chcete se zapojit, máte dotaz pro média, nebo nám chcete sdělit zpětnou vazbu? Ozvěte se.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">E-mail</p>
+              <p class="contact-info__value">
+                <a href="mailto:kontakt@stojimezauniverzitami.cz">kontakt@stojimezauniverzitami.cz</a>
+              </p>
+            </div>
+
+            <div class="contact-info__item">
+              <p class="contact-info__label">Média</p>
+              <p class="contact-info__value">
+                <a href="mailto:media@stojimezauniverzitami.cz">media@stojimezauniverzitami.cz</a>
+              </p>
+            </div>
+
+            <div class="contact-info__item">
+              <p class="contact-info__label">Sociální sítě</p>
+              <p class="contact-info__value">
+                <a href="#">Instagram</a> ·
+                <a href="#">Facebook</a> ·
+                <a href="#">X (Twitter)</a>
+              </p>
+            </div>
+
+            <div class="contact-info__item">
+              <p class="contact-info__label">Chci se zapojit</p>
+              <p class="contact-info__value" style="font-size:0.9rem; color: var(--text-muted); line-height:1.65;">
+                Hledáme dobrovolníky pro komunikaci, grafiku a koordinaci na jednotlivých školách. Napište nám na kontaktní e-mail se stručným představením.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact form (Netlify Forms) -->
+          <form
+            class="form"
+            name="kontakt"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/dekujeme.html"
+          >
+            <input type="hidden" name="form-name" value="kontakt">
+            <p class="visually-hidden">
+              <label>Nevyplňujte toto pole: <input name="bot-field"></label>
+            </p>
+
+            <div class="form__group">
+              <label class="form__label" for="k-jmeno">Jméno</label>
+              <input
+                class="form__input"
+                type="text"
+                id="k-jmeno"
+                name="jmeno"
+                autocomplete="name"
+                required
+                placeholder="Jana Nováková"
+              >
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="k-email">E-mail</label>
+              <input
+                class="form__input"
+                type="email"
+                id="k-email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="jana@example.cz"
+              >
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="k-predmet">Předmět</label>
+              <select class="form__select" id="k-predmet" name="predmet">
+                <option value="dotaz">Obecný dotaz</option>
+                <option value="media">Mediální dotaz</option>
+                <option value="zapojeni">Chci se zapojit</option>
+                <option value="jine">Jiné</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="k-zprava">Zpráva</label>
+              <textarea
+                class="form__textarea"
+                id="k-zprava"
+                name="zprava"
+                required
+                placeholder="Vaše zpráva…"
+                style="min-height: 130px;"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form__submit">
+              Odeslat zprávu
+            </button>
+
+            <p class="form__note">
+              Obvykle odpovídáme do 48 hodin.
+            </p>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container--wide">
+      <div class="footer__inner">
+        <span>© 2025 Stojíme za univerzitami</span>
+        <ul class="footer__links">
+          <li><a href="index.html">O nás</a></li>
+          <li><a href="otevreny-dopis.html">Otevřený dopis</a></li>
+          <li><a href="podepiste.html">Podepište</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const list   = document.querySelector('.nav__list');
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>
