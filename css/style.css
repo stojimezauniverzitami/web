@@ -360,6 +360,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 .letter__body { font-size: 1rem; line-height: 1.85; }
 
+.letter__body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
 .letter__body p { margin-bottom: 1.25rem; }
 
 .letter__body h3 {
@@ -382,6 +388,11 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+.letter__signatories-link {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
 }
 
 .letter__download {
