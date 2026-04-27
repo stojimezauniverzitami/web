@@ -17,9 +17,11 @@ def fetch_all_submissions(api_key):
     page = 1
     while True:
         url = f"{API_BASE}/forms/{FORM_ID}/submissions?page={page}&limit=200"
-        req = urllib.request.Request(
-            url, headers={"Authorization": f"Bearer {api_key}"}
-        )
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Bearer {api_key}",
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0 (compatible; signatories-updater/1.0)",
+        })
         try:
             with urllib.request.urlopen(req) as resp:
                 data = json.loads(resp.read())
