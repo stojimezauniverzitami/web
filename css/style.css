@@ -208,12 +208,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── Hero ────────────────────────────────────────────────── */
 
 .hero {
-  min-height: calc(100vh - var(--nav-h));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
-  padding: 4rem 0;
+  padding: 5rem 0 4rem;
 }
 
 .hero__eyebrow {
@@ -651,10 +647,6 @@ img { max-width: 100%; height: auto; display: block; }
   right: 0;
   z-index: 50;
   background: var(--bg);
-}
-
-.page--home .hero {
-  min-height: calc(100vh - var(--nav-h) - var(--footer-h));
 }
 
 .page--home main {
