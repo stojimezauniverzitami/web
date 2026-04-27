@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch signatories from Tally and update the list in index.html."""
+"""Fetch signatories from Tally, merge with signatories.csv, update index.html."""
 
+import csv
 import json
 import os
 import re
@@ -35,7 +36,6 @@ def fetch_all(api_key):
 
         if questions is None:
             questions = data.get("questions", [])
-            print(f"Questions: {[q.get('title') for q in questions]}")
 
         batch = data.get("submissions", [])
         submissions.extend(batch)
@@ -68,21 +68,39 @@ def is_truthy(value):
     return bool(value)
 
 
-def build_html(questions, submissions):
+def load_csv_signatories(path="signatories.csv"):
+    result = []
+    try:
+        with open(path, encoding="utf-8") as f:
+            reader = csv.reader(f)
+            next(reader)  # skip header
+            for row in reader:
+                if not row:
+                    continue
+                name = row[0].strip() if len(row) > 0 else ""
+                instituce = row[1].strip() if len(row) > 1 else ""
+                if name:
+                    result.append({"name": name, "instituce": instituce})
+    except FileNotFoundError:
+        print("signatories.csv not found, skipping manual list")
+    print(f"CSV signatories loaded: {len(result)}")
+    return result
+
+
+def load_tally_signatories(questions, submissions):
     q_map = {q["id"]: q.get("title", "") for q in questions}
+    result = []
 
-    items = []
     for i, sub in enumerate(submissions):
-        fields = sub.get("responses", [])
-        values = {q_map.get(f.get("questionId", ""), f.get("questionId", "")): f.get("answer") for f in fields}
-
-        if i == 0:
-            print(f"First submission fields: {list(values.keys())}")
-            print(f"First submission values: {values}")
+        responses = sub.get("responses", [])
+        values = {
+            q_map.get(r.get("questionId", ""), r.get("questionId", "")): r.get("answer")
+            for r in responses
+        }
 
         souhlas = find_value(values, "souhlas")
         if not is_truthy(souhlas):
-            print(f"Skipping submission {i}: consent not given (souhlas={souhlas!r})")
+            print(f"Skipping Tally submission {i}: consent not given (souhlas={souhlas!r})")
             continue
 
         jmeno    = str(find_value(values, "jméno")    or find_value(values, "jmeno")    or "").strip()
@@ -90,21 +108,40 @@ def build_html(questions, submissions):
         name = f"{jmeno} {prijmeni}".strip()
 
         if not name:
-            print(f"Skipping submission {i}: no name found")
+            print(f"Skipping Tally submission {i}: no name found")
             continue
 
         instituce = str(find_value(values, "instituce") or "").strip()
+        result.append({"name": name, "instituce": instituce})
+
+    print(f"Tally signatories with consent: {len(result)}")
+    return result
+
+
+def merge(csv_list, tally_list):
+    seen = set()
+    merged = []
+    for entry in csv_list + tally_list:
+        key = entry["name"].lower().strip()
+        if key not in seen:
+            seen.add(key)
+            merged.append(entry)
+    return merged
+
+
+def render_html(signatories):
+    items = []
+    for entry in signatories:
         aff = (
-            f'\n            <span class="signatory__affiliation">{escape(instituce)}</span>'
-            if instituce else ""
+            f'\n            <span class="signatory__affiliation">{escape(entry["instituce"])}</span>'
+            if entry["instituce"] else ""
         )
         items.append(
             f'          <li class="signatory">\n'
-            f'            <span class="signatory__name">{escape(name)}</span>'
+            f'            <span class="signatory__name">{escape(entry["name"])}</span>'
             f'{aff}\n'
             f'          </li>'
         )
-
     return "\n".join(items)
 
 
@@ -143,12 +180,14 @@ if __name__ == "__main__":
         raise SystemExit("TALLY_API_KEY environment variable not set")
 
     questions, submissions = fetch_all(api_key)
-    print(f"Total submissions: {len(submissions)}")
+    print(f"Total Tally submissions: {len(submissions)}")
 
-    list_html = build_html(questions, submissions)
-    count = list_html.count('<li class="signatory">')
+    csv_list   = load_csv_signatories()
+    tally_list = load_tally_signatories(questions, submissions)
+    all_sigs   = merge(csv_list, tally_list)
+    print(f"Total after merge: {len(all_sigs)}")
 
-    if count == 0:
-        print("No consented submissions found — index.html left unchanged")
+    if not all_sigs:
+        print("No signatories found — index.html left unchanged")
     else:
-        update_index(list_html, count)
+        update_index(render_html(all_sigs), len(all_sigs))
