@@ -24,7 +24,12 @@ def fetch_all_submissions(api_key):
             with urllib.request.urlopen(req) as resp:
                 data = json.loads(resp.read())
         except urllib.error.HTTPError as e:
-            raise SystemExit(f"Tally API error: {e.code} {e.reason}")
+            body = e.read().decode("utf-8", errors="replace")
+            raise SystemExit(f"Tally API error: {e.code} {e.reason}\nResponse: {body}")
+
+        if page == 1:
+            print(f"API response keys: {list(data.keys())}")
+            print(f"Total reported: {data.get('total')}")
 
         batch = data.get("data", [])
         if not batch:
