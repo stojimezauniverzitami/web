@@ -581,9 +581,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── Page header ─────────────────────────────────────────── */
 
 .page-header {
-  padding: 4rem 0 3.5rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 4rem;
+  padding: 4rem 0 2rem;
+  margin-bottom: 2rem;
 }
 
 .page-header__label {
