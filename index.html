@@ -62,6 +62,7 @@
           </li>
         </ul>
         <!-- SIGNATORIES:END -->
+        <div class="pagination" id="sig-pagination" aria-label="Stránkování signatářů"></div>
       </div>
     </section>
 
@@ -87,6 +88,52 @@
       const open = list.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open);
     });
+  </script>
+
+  <script>
+    (function () {
+      const PER_PAGE = 30;
+      const items = Array.from(document.querySelectorAll('.signatory'));
+      const pager = document.getElementById('sig-pagination');
+
+      if (items.length <= PER_PAGE) return;
+
+      let current = 1;
+      const totalPages = Math.ceil(items.length / PER_PAGE);
+
+      function show(page) {
+        current = page;
+        const start = (page - 1) * PER_PAGE;
+        items.forEach((el, i) => {
+          el.style.display = (i >= start && i < start + PER_PAGE) ? '' : 'none';
+        });
+        render();
+        document.querySelector('.signatories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function btn(label, page, disabled, active) {
+        const b = document.createElement('button');
+        b.className = 'pagination__btn' + (active ? ' pagination__btn--active' : '');
+        b.textContent = label;
+        b.disabled = disabled;
+        b.setAttribute('aria-current', active ? 'page' : 'false');
+        b.addEventListener('click', () => show(page));
+        return b;
+      }
+
+      function render() {
+        pager.innerHTML = '';
+        pager.appendChild(btn('‹', current - 1, current === 1, false));
+
+        for (let p = 1; p <= totalPages; p++) {
+          pager.appendChild(btn(p, p, false, p === current));
+        }
+
+        pager.appendChild(btn('›', current + 1, current === totalPages, false));
+      }
+
+      show(1);
+    })();
   </script>
 
 </body>
