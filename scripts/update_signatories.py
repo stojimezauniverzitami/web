@@ -79,8 +79,9 @@ def load_csv_signatories(path="signatories.csv"):
                     continue
                 name = row[0].strip() if len(row) > 0 else ""
                 instituce = row[1].strip() if len(row) > 1 else ""
+                role = row[2].strip() if len(row) > 2 else ""
                 if name:
-                    result.append({"name": name, "instituce": instituce})
+                    result.append({"name": name, "instituce": instituce, "role": role})
     except FileNotFoundError:
         print("signatories.csv not found, skipping manual list")
     print(f"CSV signatories loaded: {len(result)}")
@@ -112,7 +113,12 @@ def load_tally_signatories(questions, submissions):
             continue
 
         instituce = str(find_value(values, "instituce") or "").strip()
-        result.append({"name": name, "instituce": instituce})
+        role_raw = find_value(values, "role")
+        if isinstance(role_raw, list):
+            role = ", ".join(str(r) for r in role_raw if r)
+        else:
+            role = str(role_raw or "").strip()
+        result.append({"name": name, "instituce": instituce, "role": role})
 
     print(f"Tally signatories with consent: {len(result)}")
     return result
@@ -132,9 +138,11 @@ def merge(csv_list, tally_list):
 def render_html(signatories):
     items = []
     for entry in signatories:
+        aff_parts = [p for p in [entry.get("instituce", ""), entry.get("role", "")] if p]
+        aff_text = " · ".join(aff_parts)
         aff = (
-            f'\n            <span class="signatory__affiliation">{escape(entry["instituce"])}</span>'
-            if entry["instituce"] else ""
+            f'\n            <span class="signatory__affiliation">{escape(aff_text)}</span>'
+            if aff_text else ""
         )
         items.append(
             f'          <li class="signatory">\n'
