@@ -609,6 +609,37 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.7;
 }
 
+/* ── Signatories ─────────────────────────────────────────── */
+
+.signatories__list {
+  list-style: none;
+  columns: 3;
+  column-gap: 2rem;
+}
+
+@media (max-width: 768px) { .signatories__list { columns: 2; } }
+@media (max-width: 480px) { .signatories__list { columns: 1; } }
+
+.signatory {
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.signatory__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.signatory__affiliation {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
 /* ── Homepage: fixed footer ──────────────────────────────── */
 
 :root { --footer-h: 5.5rem; }
