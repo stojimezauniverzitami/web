@@ -13,6 +13,8 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Přeskočit na obsah</a>
+
   <nav class="nav" role="navigation" aria-label="Hlavní navigace">
     <div class="container--wide">
       <div class="nav__inner">
@@ -25,14 +27,14 @@
         </button>
         <ul class="nav__list" id="nav-list">
           <li><a href="otevreny-dopis.html">Otevřený dopis</a></li>
-          <li><a href="podepiste.html" class="btn btn--primary active">Podepište</a></li>
+          <li><a href="podepiste.html" class="btn btn--primary active" aria-current="page">Podepište</a></li>
           <li><a href="pravni-informace.html">Ochrana údajů</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <div class="section">
       <div class="container">
 
@@ -51,6 +53,7 @@
           height="400"
           frameborder="0"
           marginheight="0"
+          aria-label="Formulář pro podepsání výzvy"
           marginwidth="0"
           title="Podepište výzvu"
           style="max-width: var(--max-w);"

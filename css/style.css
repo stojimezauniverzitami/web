@@ -6,8 +6,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --accent:        #3a8c06;
-  --accent-hover:  #4db309;
+  --accent:        #185602;
+  --accent-hover:  #1f6e03;
   --bg:            #f7aed0;
   --text:          #111111;
   --text-muted:    #5a3a4a;
@@ -38,6 +38,28 @@ main { flex: 1; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; display: block; }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Focus styles */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 /* ── Layout ─────────────────────────────────────────────── */
 

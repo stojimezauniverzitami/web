@@ -13,6 +13,8 @@
 </head>
 <body class="page--home">
 
+  <a href="#main-content" class="skip-link">Přeskočit na obsah</a>
+
   <nav class="nav" role="navigation" aria-label="Hlavní navigace">
     <div class="container--wide">
       <div class="nav__inner">
@@ -32,7 +34,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
 
     <!-- Hero -->
     <section class="hero">
@@ -552,7 +554,10 @@ spolok LIGHT*</span>
           el.style.display = (i >= start && i < start + PER_PAGE) ? '' : 'none';
         });
         render();
-        if (scroll) document.querySelector('.signatories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (scroll) {
+          document.querySelector('.signatories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          pager.querySelector('.pagination__btn--active')?.focus();
+        }
       }
 
       function btn(label, page, disabled, active) {
@@ -560,20 +565,24 @@ spolok LIGHT*</span>
         b.className = 'pagination__btn' + (active ? ' pagination__btn--active' : '');
         b.textContent = label;
         b.disabled = disabled;
-        b.setAttribute('aria-current', active ? 'page' : 'false');
+        if (active) b.setAttribute('aria-current', 'page');
         b.addEventListener('click', () => show(page, true));
         return b;
       }
 
       function render() {
         pager.innerHTML = '';
-        pager.appendChild(btn('‹', current - 1, current === 1, false));
+        const prev = btn('‹', current - 1, current === 1, false);
+        prev.setAttribute('aria-label', 'Předchozí stránka');
+        pager.appendChild(prev);
 
         for (let p = 1; p <= totalPages; p++) {
           pager.appendChild(btn(p, p, false, p === current));
         }
 
-        pager.appendChild(btn('›', current + 1, current === totalPages, false));
+        const next = btn('›', current + 1, current === totalPages, false);
+        next.setAttribute('aria-label', 'Další stránka');
+        pager.appendChild(next);
       }
 
       show(1, false);

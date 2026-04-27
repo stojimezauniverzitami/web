@@ -13,13 +13,15 @@
   <style>
     .legal h2 { font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.75rem; }
     .legal h3 { font-size: 1rem; font-weight: 600; margin: 1.75rem 0 0.5rem; }
-    .legal p  { margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.8; color: #333; }
+    .legal p  { margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.8; color: var(--text); }
     .legal ul { padding-left: 1.5rem; margin-bottom: 1rem; }
-    .legal ul li { font-size: 0.95rem; line-height: 1.8; color: #333; margin-bottom: 0.25rem; }
+    .legal ul li { font-size: 0.95rem; line-height: 1.8; color: var(--text); margin-bottom: 0.25rem; }
     .legal a  { color: var(--accent); }
   </style>
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Přeskočit na obsah</a>
 
   <nav class="nav" role="navigation" aria-label="Hlavní navigace">
     <div class="container--wide">
@@ -34,13 +36,13 @@
         <ul class="nav__list" id="nav-list">
           <li><a href="otevreny-dopis.html">Otevřený dopis</a></li>
           <li><a href="podepiste.html" class="btn btn--primary">Podepište</a></li>
-          <li><a href="pravni-informace.html" class="active">Ochrana údajů</a></li>
+          <li><a href="pravni-informace.html" class="active" aria-current="page">Ochrana údajů</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <div class="section">
       <div class="container">
 
