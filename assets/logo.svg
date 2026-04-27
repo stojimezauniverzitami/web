@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 48" role="img" aria-label="Stojíme za univerzitami">
-  <title>Stojíme za univerzitami</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 48" role="img" aria-label="Stojíme s univerzitami">
+  <title>Stojíme s univerzitami</title>
 
   <!-- Mark (same geometry as logo-mark.svg) -->
   <circle cx="10" cy="7"   r="3.5"  fill="#1d3461"/>
@@ -21,7 +21,7 @@
     font-weight="700"
     font-size="15"
     letter-spacing="-0.3"
-    fill="#111111">Stojíme za</text>
+    fill="#111111">Stojíme s</text>
   <text
     x="64" y="38"
     font-family="Inter, system-ui, -apple-system, sans-serif"
