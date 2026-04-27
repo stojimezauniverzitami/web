@@ -538,14 +538,14 @@ spolok LIGHT*</span>
       let current = 1;
       const totalPages = Math.ceil(items.length / PER_PAGE);
 
-      function show(page) {
+      function show(page, scroll) {
         current = page;
         const start = (page - 1) * PER_PAGE;
         items.forEach((el, i) => {
           el.style.display = (i >= start && i < start + PER_PAGE) ? '' : 'none';
         });
         render();
-        document.querySelector('.signatories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (scroll) document.querySelector('.signatories').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
       function btn(label, page, disabled, active) {
@@ -554,7 +554,7 @@ spolok LIGHT*</span>
         b.textContent = label;
         b.disabled = disabled;
         b.setAttribute('aria-current', active ? 'page' : 'false');
-        b.addEventListener('click', () => show(page));
+        b.addEventListener('click', () => show(page, true));
         return b;
       }
 
@@ -569,7 +569,7 @@ spolok LIGHT*</span>
         pager.appendChild(btn('›', current + 1, current === totalPages, false));
       }
 
-      show(1);
+      show(1, false);
     })();
   </script>
 
