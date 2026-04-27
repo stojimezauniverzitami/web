@@ -44,121 +44,35 @@
           </p>
         </div>
 
-        <!-- Petition form (Netlify Forms) -->
-        <!--
-          Nasazení na Netlify: formulář je připraven pro Netlify Forms.
-          Stačí nasadit stránku na Netlify – podpisy se budou automaticky sbírat
-          v sekci Forms v Netlify dashboardu (bez dalšího kódu).
-          Bezplatný tier: 100 podpisů/měsíc. Pro větší objem zvažte Tally.so.
-        -->
-        <form
-          class="form"
-          name="podpis"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/dekujeme.html"
-        >
-          <input type="hidden" name="form-name" value="podpis">
-          <p class="visually-hidden">
-            <label>Nevyplňujte toto pole: <input name="bot-field"></label>
-          </p>
+        <!-- Tally embed -->
+        <iframe data-tally-src="https://tally.so/embed/2Eb7Rb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="400"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Podepište výzvu"
+          style="max-width: var(--max-w);"
+        ></iframe>
+        <script>
+          var d = document, w = "https://tally.so/widgets/embed.js",
+          v = function() {
+            "undefined" != typeof Tally
+              ? Tally.loadEmbeds()
+              : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) { e.src = e.dataset.tallySrc });
+          };
+          if ("undefined" != typeof Tally) v();
+          else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script");
+            s.src = w; s.onload = v; s.onerror = v; d.body.appendChild(s);
+          }
+        </script>
 
-          <div class="form__row">
-            <div class="form__group">
-              <label class="form__label" for="jmeno">Jméno</label>
-              <input
-                class="form__input"
-                type="text"
-                id="jmeno"
-                name="jmeno"
-                autocomplete="given-name"
-                required
-                placeholder="Jana"
-              >
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="prijmeni">Příjmení</label>
-              <input
-                class="form__input"
-                type="text"
-                id="prijmeni"
-                name="prijmeni"
-                autocomplete="family-name"
-                required
-                placeholder="Nováková"
-              >
-            </div>
-          </div>
-
-          <div class="form__group">
-            <label class="form__label" for="email">E-mail</label>
-            <input
-              class="form__input"
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              required
-              placeholder="jana@example.cz"
-            >
-          </div>
-
-          <div class="form__group">
-            <label class="form__label" for="instituce">
-              Instituce <span class="optional">(nepovinné)</span>
-            </label>
-            <input
-              class="form__input"
-              type="text"
-              id="instituce"
-              name="instituce"
-              placeholder="Univerzita Karlova, ČVUT, MU…"
-            >
-          </div>
-
-          <div class="form__group">
-            <label class="form__label" for="role">
-              Role <span class="optional">(nepovinné)</span>
-            </label>
-            <select class="form__select" id="role" name="role">
-              <option value="">— vyberte —</option>
-              <option value="student">Student / studentka</option>
-              <option value="absolvent">Absolvent / absolventka</option>
-              <option value="akademik">Akademický pracovník / pracovnice</option>
-              <option value="jine">Jiné</option>
-            </select>
-          </div>
-
-          <div class="form__group">
-            <label class="form__label" for="vzkaz">
-              Vzkaz <span class="optional">(nepovinné)</span>
-            </label>
-            <textarea
-              class="form__textarea"
-              id="vzkaz"
-              name="vzkaz"
-              placeholder="Proč vám záleží na nezávislosti univerzit?"
-            ></textarea>
-          </div>
-
-          <div class="form__group">
-            <label class="form__checkbox">
-              <input type="checkbox" name="souhlas" required>
-              Souhlasím se zpracováním osobních údajů pro účely této petice. Moje jméno může být zveřejněno v seznamu signatářů. Svůj souhlas mohu kdykoli odvolat.
-            </label>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--lg form__submit">
-            Podepsat výzvu
-          </button>
-
-          <p class="form__note">
-            Váš e-mail nebude zveřejněn a nebude použit k marketingovým účelům.<br>
-            Více v <a href="pravni-informace.html">zásadách ochrany osobních údajů</a>.
-          </p>
-
-        </form>
+        <p class="form__note" style="margin-top: 1rem;">
+          Váš e-mail nebude zveřejněn a nebude použit k marketingovým účelům.<br>
+          Více v <a href="pravni-informace.html">zásadách ochrany osobních údajů</a>.
+        </p>
 
       </div>
     </div>
