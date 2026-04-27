@@ -77,6 +77,8 @@ def build_html(questions, submissions):
         values = {q_map.get(f.get("key", ""), f.get("key", "")): f.get("value") for f in fields}
 
         if i == 0:
+            print(f"First submission keys: {list(sub.keys())}")
+            print(f"First submission raw: {sub}")
             print(f"First submission fields: {list(values.keys())}")
             print(f"First submission values: {values}")
 
