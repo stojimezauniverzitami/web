@@ -290,6 +290,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .sig-count__note {
+  position: relative;
   font-size: 1em;
   font-weight: 400;
   letter-spacing: 0;
@@ -297,6 +298,34 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-muted);
   cursor: help;
   border-bottom: 1px dotted var(--text-muted);
+}
+
+.sig-count__note::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: var(--text);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0s;
+  white-space: normal;
+  z-index: 10;
+}
+
+.sig-count__note:hover::after,
+.sig-count__note:focus::after {
+  opacity: 1;
 }
 
 .section__title {
