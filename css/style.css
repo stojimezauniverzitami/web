@@ -290,7 +290,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .sig-count__note {
-  font-size: 0.7em;
+  font-size: 1em;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
