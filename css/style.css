@@ -289,6 +289,16 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 0.65rem;
 }
 
+.sig-count__note {
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+  cursor: help;
+  border-bottom: 1px dotted var(--text-muted);
+}
+
 .section__title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 700;
