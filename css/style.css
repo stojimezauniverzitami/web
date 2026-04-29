@@ -6,13 +6,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --accent:        #185602;
-  --accent-hover:  #1f6e03;
-  --bg:            #f7aed0;
+  --accent:        #4d1a63;
+  --accent-hover:  #631f80;
+  --bg:            #d9d68c;
   --text:          #111111;
-  --text-muted:    #5a3a4a;
-  --border:        #e888b8;
-  --surface:       #fcd0e5;
+  --text-muted:    #47390d;
+  --border:        #c4c270;
+  --surface:       #e5e3a0;
   --max-w:         800px;
   --max-w-wide:    1080px;
   --nav-h:         64px;
