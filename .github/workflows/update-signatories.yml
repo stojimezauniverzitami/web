@@ -15,16 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Python dependencies
+        run: pip install pyyaml beautifulsoup4
+
       - name: Fetch signatories from Tally and update index.html
         env:
           TALLY_API_KEY: ${{ secrets.TALLY_API_KEY }}
         run: python scripts/update_signatories.py
+
+      - name: Regenerate English index from updated index.html
+        run: python scripts/build_en.py
 
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/stojimezauniverzitami/web.git
-          git add index.html
+          git add index.html en/index.html en/js/cookie-notice.js
           git diff --staged --quiet && echo "No changes to commit" || \
             (git commit -m "chore: update signatories list" && git push origin main)
