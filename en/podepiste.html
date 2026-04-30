@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Sign the open letter from the Standing with Universities initiative and support academic freedom." name="description"/>
+<title>Sign – Standing with Universities</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav aria-label="Main navigation" class="nav" role="navigation">
+<div class="container--wide">
+<div class="nav__inner">
+<a class="nav__brand" href="index.html">Standing with Universities</a>
+<button aria-controls="nav-list" aria-expanded="false" aria-label="Open menu" class="nav__toggle">
+<span></span><span></span><span></span>
+</button>
+<ul class="nav__list" id="nav-list">
+<li><a href="otevreny-dopis.html">Open Letter</a></li>
+<li><a aria-current="page" class="btn btn--primary active" href="podepiste.html">Sign</a></li>
+<li><a href="pravni-informace.html">Privacy</a></li>
+<li>
+<a aria-label="Instagram @stojimesuniverzitami" class="nav__social" href="https://www.instagram.com/stojimesuniverzitami/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" fill="none" focusable="false" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+</li>
+<li aria-label="Jazyk / Language" class="lang-switch"><a class="lang-switch__link" href="../podepiste.html" hreflang="cs" lang="cs">CS</a><span aria-hidden="true">/</span><span class="lang-switch__current">EN</span></li>
+</ul>
+</div>
+</div>
+</nav>
+<main id="main-content">
+<div class="section">
+<div class="container">
+<div class="page-header">
+<p class="page-header__label">Call to action</p>
+<h1 class="page-header__title">Sign the open letter</h1>
+<p class="page-header__lead">Add your voice to those who reject political interference in the functioning of Czech universities.</p>
+</div>
+<!-- Tally embed -->
+<iframe aria-label="Signing form" data-tally-src="https://tally.so/embed/2Eb7Rb?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" frameborder="0" height="400" loading="lazy" marginheight="0" marginwidth="0" style="max-width: var(--max-w);" title="Sign the letter" width="100%"></iframe>
+<script>
+          var d = document, w = "https://tally.so/widgets/embed.js",
+          v = function() {
+            "undefined" != typeof Tally
+              ? Tally.loadEmbeds()
+              : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) { e.src = e.dataset.tallySrc });
+          };
+          if ("undefined" != typeof Tally) v();
+          else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script");
+            s.src = w; s.onload = v; s.onerror = v; d.body.appendChild(s);
+          }
+        </script>
+<p class="form__note" style="margin-top: 1rem;">Your email will not be made public and will not be used for marketing purposes.
+          By submitting the form you confirm that you are over 15 years of age.<br/>
+          More in the <a href="pravni-informace.html">privacy policy</a>.</p>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container--wide">
+<div class="footer__inner">
+<span>Content freely available under the licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.cs" rel="noopener" target="_blank">CC BY-SA 4.0</a></span>
+<ul class="footer__links">
+<li><a href="otevreny-dopis.html">Open Letter</a></li>
+<li><a href="podepiste.html">Sign</a></li>
+<li><a href="pravni-informace.html">Privacy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+    const toggle = document.querySelector('.nav__toggle');
+    const list   = document.querySelector('.nav__list');
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+<script src="js/cookie-notice.js"></script>
+</body>
+</html>

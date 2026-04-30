@@ -1,0 +1,437 @@
+# =============================================================================
+# Stojíme s univerzitami — Translation file (Czech → English)
+# =============================================================================
+#
+# HOW TO USE THIS FILE:
+#   • Edit ONLY the "en:" values.
+#   • Do NOT change "cs:" values, keys, or structure.
+#   • Entries marked "# ⚠ HTML" contain HTML tags — keep the tags intact
+#     (e.g. <strong>, <a href="...">, <br>), translate only the visible text.
+#   • Lines starting with # are comments — ignore or delete them.
+#
+# AFTER EDITING: run  python3 scripts/build_en.py  to generate the en/ folder.
+# =============================================================================
+
+
+# ── SHARED (appears on every page) ──────────────────────────────────────────
+
+shared:
+
+  skip_link:
+    cs: "Přeskočit na obsah"
+    en: "Skip to content"
+
+  nav_aria:
+    cs: "Hlavní navigace"
+    en: "Main navigation"
+
+  nav_brand:
+    cs: "Stojíme s univerzitami"
+    en: "Standing with Universities"
+
+  nav_toggle:
+    cs: "Otevřít menu"
+    en: "Open menu"
+
+  nav_open_letter:
+    cs: "Otevřený dopis"
+    en: "Open Letter"
+
+  nav_sign:
+    cs: "Podepište"
+    en: "Sign"
+
+  nav_privacy:
+    cs: "Ochrana údajů"
+    en: "Privacy"
+
+  footer_license:
+    cs: "Obsah je volně šiřitelný pod licencí"
+    en: "Content freely available under the licence"
+
+  cookie_aria:
+    cs: "Informace o cookies"
+    en: "Cookie notice"
+
+  # ⚠ HTML — keep <strong> and <a href="..."> tags; translate text only
+  cookie_text_html:
+    cs: "Web používá <strong>Google Fonts</strong> (sdílení IP s Googlem) a formulář <strong>Tally.so</strong>, který může ukládat cookies. <a href=\"pravni-informace.html\">Více informací</a>"
+    en: "This site uses <strong>Google Fonts</strong> (shares your IP with Google) and the <strong>Tally.so</strong> form, which may store cookies. <a href=\"pravni-informace.html\">More information</a>"
+
+  cookie_btn:
+    cs: "Rozumím"
+    en: "I understand"
+
+  cookie_btn_aria:
+    cs: "Potvrdit a zavřít upozornění"
+    en: "Confirm and close notice"
+
+
+# ── HOME PAGE (index.html) ───────────────────────────────────────────────────
+
+index:
+
+  meta_description:
+    cs: "Studentské hnutí za zachování nezávislosti českých vysokých škol před politickými zásahy."
+    en: "A student movement defending the independence of Czech universities from political interference."
+
+  meta_title:
+    cs: "Stojíme s univerzitami"
+    en: "Standing with Universities"
+
+  # ⚠ HTML — keep <br> tag
+  hero_title_html:
+    cs: "Stojíme s<br>univerzitami"
+    en: "Standing with<br>Universities"
+
+  # ⚠ HTML — keep <strong> tag
+  hero_subtitle_html:
+    cs: "Jsme studentstvo, pedagožstvo, akademické pracovnictvo a absolventstvo českých a slovenských univerzit, kterému <strong>záleží na budoucnosti, nezávislosti a svobodě výzkumných a kulturně-uměleckých institucí</strong>."
+    en: "We are students, teachers, academics, and graduates of Czech and Slovak universities who <strong>care about the future, independence, and freedom of academic and cultural institutions</strong>."
+
+  hero_btn_sign:
+    cs: "Podepsat výzvu"
+    en: "Sign the letter"
+
+  hero_btn_letter:
+    cs: "Číst otevřený dopis"
+    en: "Read the open letter"
+
+  sig_label_prefix:
+    cs: "Signatářstvo · "
+    en: "Signatories · "
+
+  sig_label_suffix:
+    cs: " podpisů"
+    en: " signatures"
+
+  sig_tooltip:
+    cs: "Seznam se průběžně aktualizuje, skutečný počet podpisů může být vyšší."
+    en: "The list is updated continuously; the actual number of signatures may be higher."
+
+
+# ── OPEN LETTER (otevreny-dopis.html) ────────────────────────────────────────
+
+letter:
+
+  meta_description:
+    cs: "Otevřený dopis iniciativy Stojíme s univerzitami adresovaný vedení Univerzity Karlovy na obranu akademické svobody."
+    en: "An open letter from the Standing with Universities initiative addressed to the leadership of Charles University in defence of academic freedom."
+
+  meta_title:
+    cs: "Otevřený dopis – Stojíme s univerzitami"
+    en: "Open Letter – Standing with Universities"
+
+  header_label:
+    cs: "Otevřený dopis"
+    en: "Open Letter"
+
+  salutation:
+    cs: "Vážené vedení Univerzity Karlovy,"
+    en: "Dear leadership of Charles University,"
+
+  p1:
+    cs: "obracíme se na Vás jakožto studující, absolventstvo, pedagogické a akademické pracovnictvo českých a slovenských univerzit, kterým záleží na demokratické tradici univerzitního vzdělávání a akademických svobod."
+    en: "we are addressing you as students, graduates, pedagogical and academic staff of Czech and Slovak universities who care about the democratic tradition of university education and academic freedom."
+
+  # ⚠ HTML — keep <a href="...">…</a> links; translate only the link text and surrounding text
+  p2_html:
+    cs: "Tímto otevřeným dopisem reagujeme na útoky na nezávislost univerzitního prostředí a znevažování společenského významu humanitních věd, ke kterému dochází ze stran současné politické reprezentace, jmenovitě ministra zahraničních věcí Petra Macinky, a také některých médií. Vyjadřujeme solidaritu se studujícími, pedagogickým i akademickým pracovnictvem, které je terčem těchto útoků a neprávem je v médiích <a href=\"https://medium.seznam.cz/clanek/matane-akademicka-svoboda-nebo-inkubator-extremismu-proc-se-ceske-univerzity-meni-v-bojiste-267324\">spojováno s extremismem</a>, a vyzýváme vedení Univerzity Karlovy k tomu, aby se postavilo za nezávislost akademické obce."
+    en: "With this open letter, we respond to attacks on the independence of the university environment and the belittling of the social importance of the humanities, carried out by representatives of the current political leadership — namely Foreign Minister Petr Macinka — and by certain media outlets. We express solidarity with students, pedagogical, and academic staff who are targeted by these attacks and are unjustly <a href=\"https://medium.seznam.cz/clanek/matane-akademicka-svoboda-nebo-inkubator-extremismu-proc-se-ceske-univerzity-meni-v-bojiste-267324\">associated with extremism</a> in the media, and we call on the leadership of Charles University to stand up for the independence of the academic community."
+
+  # ⚠ HTML — keep <a href="...">…</a> links
+  p3_html:
+    cs: "V posledních týdnech v mediálním prostoru dochází k nesmyslnému očerňování vysokoškolských institucí, zejména Fakulty humanitních studií, skrze zkratkovitá nebo vyloženě nepravdivá vyjádření obviňující ji z toho, že <a href=\"https://www.youtube.com/watch?v=otlqEtlbcdc&list=PL8G0256zv5Cuhnk4MU3eQOSccjhKIsMEr&index=4\">„vychovává teroristy“</a> . Tento a podobné útoky jsou součástí snahy o účelné ovlivňování a omezování akademické diskuze, k níž dochází zejména ve spojitosti s urgentními tématy klimatické krize, genderové a ekonomické nerovnosti či lidských práv. Podobná rétorika představuje nebezpečný precedens. V USA již umožnila <a href=\"https://www.nytimes.com/2026/03/07/arts/humanities-endowment-doge-trump.html\">rozsáhlé škrty ve financování historického a sociálněvědního výzkumu</a> týkajícího se historicky znevýhodňovaných skupin, klimatické změny či Holocaustu, v Maďarsku vedla ke zrušení programu Gender Studies a následnému <a href=\"https://www.theguardian.com/world/2018/dec/03/dark-day-freedom-george-soros-affiliated-central-european-university-quits-hungary\">odchodu celé Central European University</a> ze země."
+    en: "In recent weeks, the media space has seen senseless smearing of higher education institutions, especially the Faculty of Humanities, through reductive or outright false statements accusing it of <a href=\"https://www.youtube.com/watch?v=otlqEtlbcdc&list=PL8G0256zv5Cuhnk4MU3eQOSccjhKIsMEr&index=4\">“training terrorists”</a>. These and similar attacks are part of an effort to deliberately influence and curtail academic discourse, particularly in connection with urgent topics such as the climate crisis, gender and economic inequality, and human rights. Such rhetoric sets a dangerous precedent. In the United States, it has already enabled <a href=\"https://www.nytimes.com/2026/03/07/arts/humanities-endowment-doge-trump.html\">sweeping cuts to funding for historical and social science research</a> concerning historically marginalised groups, climate change, and the Holocaust; in Hungary it led to the abolition of the Gender Studies programme and the subsequent <a href=\"https://www.theguardian.com/world/2018/dec/03/dark-day-freedom-george-soros-affiliated-central-european-university-quits-hungary\">departure of the entire Central European University</a> from the country."
+
+  p4:
+    cs: "Humanitní a společenskovědní obory jsou základem pro demokratickou a pluralitní společnost postavenou na lidských právech a lidské důstojnosti. Není náhodou, že autoritářské režimy napříč historií volí právě je jako jedny ze svých prvních cílů. Představitelé strany Motoristé sobě si na dehonestaci humanitních věd a vyhrožování „zrušením“ nebo zpoplatněním vysokoškolských oborů, které nekonvenují jejich vlastním ideologickým zájmům, dlouhodobě staví politický program. Obáváme se nejenom snah o odstranění těchto oborů, ale také o ovládnutí a následné rozložení univerzit zevnitř — například skrze samosprávné orgány, jako jsou akademické senáty — což by představovalo závažné ohrožení nezávislosti univerzit."
+    en: "Humanities and social sciences are the foundation of a democratic and pluralistic society built on human rights and human dignity. It is no coincidence that authoritarian regimes throughout history have targeted them among their first victims. Representatives of the Motorists for Themselves party have long built their political programme on disparaging the humanities and threatening to ‚bolish” or introduce fees for university programmes that do not conform to their own ideological interests. We fear not only efforts to eliminate these programmes, but also attempts to seize and subsequently dismantle universities from within — for example through self-governing bodies such as academic senates — which would pose a serious threat to the independence of universities."
+
+  # ⚠ HTML — keep <a href="...">…</a> links
+  p5_html:
+    cs: "Oceňujeme, že se vedení UK <a href=\"https://cuni.cz/UK-15771.html\">zastalo</a> studujících a svobody projevu v reakci na <a href=\"https://alipro.cz/otevreny-dopis-vedeni-univerzity-karlovy/\">otevřený dopis Aliance pro rodinu</a> , avšak je pro nás nepochopitelné, proč se obdobného zastání nedostává studujícím a vyučujícím zejména z Fakulty humanitních studií, čelícím stupňujícím se útokům. Znepokojuje nás také současné dění kolem předmětu Úvod do klimatické krize. I když podle dostupných informací došlo k jeho úpravě a disciplinárním postihům již před vystoupením ministra Macinky, celá situace a její mediální rámování poukazují na nebezpečí, kterým akademická obec čelí. Politické tlaky na ideologickou cenzuru vysokoškolského vzdělání nebo jeho zpoplatnění nabývají na síle a vnímáme je jako ohrožující pro demokratičnost akademie."
+    en: "We appreciate that the leadership of Charles University <a href=\"https://cuni.cz/UK-15771.html\">stood up for</a> students and freedom of expression in response to the <a href=\"https://alipro.cz/otevreny-dopis-vedeni-univerzity-karlovy/\">open letter from the Alliance for Family</a>, however we cannot understand why similar support is not extended to students and teachers, especially at the Faculty of Humanities, who face escalating attacks. We are also troubled by the current developments surrounding the course Introduction to the Climate Crisis. Although, according to available information, changes and disciplinary measures were taken even before Minister Macinka’s intervention, the entire situation and its media framing highlight the dangers the academic community faces. Political pressure for ideological censorship of higher education, or the introduction of tuition fees, is intensifying, and we view it as a threat to the democratic character of academia."
+
+  call_intro:
+    cs: "Proto vyzýváme Univerzitu Karlovu, aby:"
+    en: "We therefore call on Charles University to:"
+
+  li1:
+    cs: "neustupovala demagogickým, dehonestujícím a degradujícím narativům vládních a politických představitelů;"
+    en: "not yield to the demagogic, demeaning, and degrading narratives of government and political representatives;"
+
+  li2:
+    cs: "se vymezila proti nenávisti, zastrašování a cenzuře, kterým její studentstvo a zaměstnanectvo v posledních týdnech čelí ze strany politických elit a některých médií;"
+    en: "stand against the hatred, intimidation, and censorship that its students and staff have faced in recent weeks from political elites and certain media outlets;"
+
+  li3:
+    cs: "nadále bránila, kultivovala a udržovala hodnoty vysokoškolského vzdělávání, akademické svobody, jakož i demokratické a kritické diskuze."
+    en: "continue to defend, cultivate, and uphold the values of higher education, academic freedom, and democratic and critical discourse."
+
+  p6:
+    cs: "Současné snahy o omezování akademických svobod vnímáme jako záminku pro postupnou destrukci demokratických institucí a rozklad právního státu. Se znepokojením sledujeme obdobné dění na poli kultury, ochrany životního prostředí, neziskového sektoru nebo veřejnoprávních médií. V této situaci je nutné držet při sobě a vytvářet sjednocenou protiváhu autoritářským tendencím."
+    en: "We view the current efforts to restrict academic freedoms as a pretext for the gradual destruction of democratic institutions and the dismantling of the rule of law. We watch with concern similar developments in the fields of culture, environmental protection, the non-profit sector, and public media. In this situation, it is necessary to stand together and form a united counterweight to authoritarian tendencies."
+
+  p7:
+    cs: "S ohledem na aktuální tlak směřovaný převážně na Univerzitu Karlovu adresujeme tento dopis jejímu vedení. Možnost otevřeně debatovat, vyučovat a bádat bez ohledu na politické zájmy vládních stran se však týká nás všech, proto apelujeme i na další vysokoškolské, vzdělávací a kulturně-umělecké instituce, spojme se k obraně nezávislosti a svobody univerzit. Jsme s vámi, buďte s námi!"
+    en: "Given the current pressure directed primarily at Charles University, we are addressing this letter to its leadership. However, the ability to openly debate, teach, and conduct research regardless of the political interests of governing parties concerns all of us — and so we also appeal to other higher education, educational, and cultural-artistic institutions: let us unite in defence of the independence and freedom of universities. We stand with you — stand with us!"
+
+  signoff_1:
+    cs: "S úctou,"
+    en: "Respectfully,"
+
+  signoff_2:
+    cs: "studentstvo, pedagožstvo, akademické pracovnictvo a absolventstvo českých a slovenských univerzit."
+    en: "students, teachers, academic staff, and graduates of Czech and Slovak universities."
+
+  signoff_3:
+    cs: "27. dubna 2026"
+    en: "April 27, 2026"
+
+  sig_link:
+    cs: "Zobrazit seznam signatářů"
+    en: "View the list of signatories"
+
+  cta_title:
+    cs: "Podpořte tento dopis svým podpisem"
+    en: "Support this letter with your signature"
+
+  cta_btn:
+    cs: "Podepsat výzvu"
+    en: "Sign the letter"
+
+
+# ── SIGN PAGE (podepiste.html) ───────────────────────────────────────────────
+
+sign:
+
+  meta_description:
+    cs: "Podepište otevřenou výzvu iniciativy Stojíme s univerzitami a podpořte akademickou svobodu."
+    en: "Sign the open letter from the Standing with Universities initiative and support academic freedom."
+
+  meta_title:
+    cs: "Podepište – Stojíme s univerzitami"
+    en: "Sign – Standing with Universities"
+
+  header_label:
+    cs: "Výzva"
+    en: "Call to action"
+
+  header_title:
+    cs: "Podepište výzvu"
+    en: "Sign the open letter"
+
+  header_lead:
+    cs: "Přidejte svůj hlas k těm, kteřx odmítají politické zásahy do fungování českých univerzit."
+    en: "Add your voice to those who reject political interference in the functioning of Czech universities."
+
+  iframe_aria:
+    cs: "Formulář pro podepsání výzvy"
+    en: "Signing form"
+
+  iframe_title:
+    cs: "Podepište výzvu"
+    en: "Sign the letter"
+
+  # ⚠ HTML — keep <br> and <a href="..."> tags
+  note_html:
+    cs: "Váš e-mail nebude zveřejněn a nebude použit k marketingovým účelům.\n          Odesláním formuláře potvrzujete, že jste starší 15 let.<br>\n          Více v <a href=\"pravni-informace.html\">zásadách ochrany osobních údajů</a>."
+    en: "Your email will not be made public and will not be used for marketing purposes.\n          By submitting the form you confirm that you are over 15 years of age.<br>\n          More in the <a href=\"pravni-informace.html\">privacy policy</a>."
+
+
+# ── PRIVACY PAGE (pravni-informace.html) ─────────────────────────────────────
+
+privacy:
+
+  meta_description:
+    cs: "Právní informace a zásady ochrany osobních údajů iniciativy Stojíme s univerzitami."
+    en: "Legal information and privacy policy of the Standing with Universities initiative."
+
+  meta_title:
+    cs: "Právní informace – Stojíme s univerzitami"
+    en: "Legal information – Standing with Universities"
+
+  header_label:
+    cs: "Právní informace"
+    en: "Legal information"
+
+  # ⚠ HTML — keep <br>
+  header_title_html:
+    cs: "Zásady ochrany<br>osobních údajů"
+    en: "Privacy<br>Policy"
+
+  header_lead:
+    cs: "Informace o zpracování osobních údajů v souladu s nařízením GDPR (EU) 2016/679."
+    en: "Information on the processing of personal data in accordance with Regulation GDPR (EU) 2016/679."
+
+  h2_1:
+    cs: "1. Správce osobních údajů"
+    en: "1. Data Controller"
+
+  # ⚠ HTML — keep <br> and <a href="mailto:...">
+  p_controller_html:
+    cs: "Správcem osobních údajů je iniciativa Stojíme s univerzitami, zastoupená koordinátory iniciativy.<br>\n              Kontaktní e-mail: <a href=\"mailto:stojimesuniverzitami@gmail.com\">stojimesuniverzitami@gmail.com</a>"
+    en: "The data controller is the Standing with Universities initiative, represented by the initiative’s coordinators.<br>\n              Contact email: <a href=\"mailto:stojimesuniverzitami@gmail.com\">stojimesuniverzitami@gmail.com</a>"
+
+  h2_2:
+    cs: "2. Jaké osobní údaje zpracováváme"
+    en: "2. Personal data we process"
+
+  p_data_intro:
+    cs: "V rámci podpisové petice shromažďujeme následující údaje:"
+    en: "As part of the petition, we collect the following data:"
+
+  li_name:
+    cs: "Jméno a příjmení"
+    en: "Full name"
+
+  li_email:
+    cs: "E-mailová adresa"
+    en: "Email address"
+
+  li_institution:
+    cs: "Instituce (nepovinné)"
+    en: "Institution (optional)"
+
+  li_role:
+    cs: "Role – studující, absolvent/ka, akademický/á pracovník/ice apod. (nepovinné)"
+    en: "Role – student, graduate, academic staff, etc. (optional)"
+
+  li_message:
+    cs: "Vzkaz (nepovinné)"
+    en: "Message (optional)"
+
+  p_no_analytics:
+    cs: "Tato webová stránka neobsahuje žádný vlastní analytický ani reklamní kód. Využíváme však služby třetích stran, které mohou zpracovávat určité technické údaje (viz sekce 5)."
+    en: "This website contains no analytics or advertising code of its own. However, we use third-party services that may process certain technical data (see section 5)."
+
+  # ⚠ HTML — keep <strong>
+  p_age_html:
+    cs: "<strong>Věková hranice:</strong> Formulář je určen osobám starším 15 let. Osoby mladší 15 let potřebují ke zpracování osobních údajů souhlas zákonného zástupce."
+    en: "<strong>Age limit:</strong> The form is intended for persons over the age of 15. Persons under 15 require parental consent for the processing of personal data."
+
+  h2_3:
+    cs: "3. Účel a právní základ zpracování"
+    en: "3. Purpose and legal basis of processing"
+
+  h3_petition:
+    cs: "Petice"
+    en: "Petition"
+
+  # ⚠ HTML — keep <strong>
+  p_petition_html:
+    cs: "Osobní údaje zadané v podpisovém formuláři zpracováváme za účelem vedení seznamu signatářů otevřeného dopisu a případného předání tohoto seznamu adresátovi výzvy. Právním základem je váš svobodný a informovaný <strong>souhlas</strong> udělený zaškrtnutím příslušného políčka ve formuláři (čl. 6 odst. 1 písm. a) GDPR)."
+    en: "We process personal data entered in the signing form for the purpose of maintaining a list of signatories to the open letter and potentially passing this list to the addressee of the petition. The legal basis is your freely given and informed <strong>consent</strong> granted by ticking the relevant box in the form (Art. 6(1)(a) GDPR)."
+
+  h3_publication:
+    cs: "Zveřejnění jména"
+    en: "Publication of name"
+
+  p_publication:
+    cs: "Jméno a příjmení signatáře bude zveřejněno v seznamu podpisů na tomto webu a může být předáno adresátovi výzvy. Souhlas se zveřejněním udělujete zaškrtnutím příslušného políčka ve formuláři. E-mailová adresa zveřejněna nebude nikdy."
+    en: "The signatory’s full name will be published in the list of signatures on this website and may be passed to the addressee of the petition. You grant consent for publication by ticking the relevant box in the form. The email address will never be published."
+
+  p_removal:
+    cs: "Chcete-li své jméno ze zveřejněného seznamu odstranit, napište nám na kontaktní e-mail. Vaše jméno odstraníme bez zbytečného odkladu."
+    en: "If you wish to have your name removed from the published list, write to us at the contact email. We will remove your name without undue delay."
+
+  h2_4:
+    cs: "4. Doba uchovávání údajů"
+    en: "4. Data retention period"
+
+  p_retention:
+    cs: "Osobní údaje uchováváme po dobu trvání kampaně a nejvýše 12 měsíců po jejím skončení. Po uplynutí této doby jsou údaje nenávratně vymazány, pokud zákon nestanoví jinak."
+    en: "We retain personal data for the duration of the campaign and for a maximum of 12 months after its conclusion. After this period, the data is irreversibly deleted, unless the law provides otherwise."
+
+  h2_5:
+    cs: "5. Příjemci údajů a služby třetích stran"
+    en: "5. Data recipients and third-party services"
+
+  p_recipients:
+    cs: "Údaje nejsou předávány třetím stranám za komerčními účely. Mohou být předány:"
+    en: "Data is not passed to third parties for commercial purposes. It may be passed to:"
+
+  # ⚠ HTML — keep <strong>
+  li_addressee_html:
+    cs: "<strong>Adresátovi otevřeného dopisu</strong> – v podobě seznamu jmen a institucí signatářů."
+    en: "<strong>The addressee of the open letter</strong> – in the form of a list of signatories’ names and institutions."
+
+  # ⚠ HTML — keep <strong> and <a href="...">
+  li_tally_html:
+    cs: "<strong>Tally.so</strong> – podpisový formulář provozuje společnost Tally.so (USA) jako zpracovatel dat (datový procesor dle čl. 28 GDPR). Tally.so může při vyplňování formuláře ukládat cookies a zpracovávat data na svých serverech mimo EU/EHP.\n              Předávání dat mimo EU/EHP se řídí standardními smluvními doložkami (SCC).\n              Více informací: <a href=\"https://tally.so/help/privacy-policy\" target=\"_blank\" rel=\"noopener\">Zásady ochrany soukromí Tally.so</a>."
+    en: "<strong>Tally.so</strong> – the signing form is operated by Tally.so (USA) as a data processor (data processor under Art. 28 GDPR). Tally.so may store cookies when completing the form and process data on its servers outside the EU/EEA.\n              Data transfers outside the EU/EEA are governed by standard contractual clauses (SCCs).\n              More information: <a href=\"https://tally.so/help/privacy-policy\" target=\"_blank\" rel=\"noopener\">Tally.so Privacy Policy</a>."
+
+  # ⚠ HTML — keep <strong> and <a href="...">
+  li_google_html:
+    cs: "<strong>Google LLC</strong> – web načítá písmo Inter ze serverů Google Fonts (fonts.googleapis.com). Při tomto načítání může být vaše IP adresa předána společnosti Google.\n              Více informací: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Zásady ochrany soukromí Google</a>."
+    en: "<strong>Google LLC</strong> – the website loads the Inter font from Google Fonts servers (fonts.googleapis.com). During this loading, your IP address may be shared with Google.\n              More information: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google Privacy Policy</a>."
+
+  # ⚠ HTML — keep <strong>
+  li_github_html:
+    cs: "<strong>GitHub, Inc.</strong> – web je hostován na platformě GitHub Pages. GitHub může zpracovávat základní technické údaje (IP adresa) v souladu s vlastními zásadami ochrany soukromí."
+    en: "<strong>GitHub, Inc.</strong> – the website is hosted on the GitHub Pages platform. GitHub may process basic technical data (IP address) in accordance with its own privacy policy."
+
+  h2_6:
+    cs: "6. Vaše práva"
+    en: "6. Your rights"
+
+  p_rights:
+    cs: "Jako subjekt údajů máte právo:"
+    en: "As a data subject, you have the right:"
+
+  # ⚠ HTML — keep <strong>
+  li_access_html:
+    cs: "<strong>na přístup</strong> ke svým osobním údajům (čl. 15 GDPR),"
+    en: "<strong>of access</strong> to your personal data (Art. 15 GDPR),"
+
+  li_rectification_html:
+    cs: "<strong>na opravu</strong> nepřesných nebo neúplných údajů (čl. 16 GDPR),"
+    en: "<strong>of rectification</strong> of inaccurate or incomplete data (Art. 16 GDPR),"
+
+  li_erasure_html:
+    cs: "<strong>na výmaz</strong> („právo být zapomenut“) (čl. 17 GDPR),"
+    en: "<strong>of erasure</strong> (“right to be forgotten”) (Art. 17 GDPR),"
+
+  li_restriction_html:
+    cs: "<strong>na omezení zpracování</strong> (čl. 18 GDPR),"
+    en: "<strong>of restriction of processing</strong> (Art. 18 GDPR),"
+
+  li_portability_html:
+    cs: "<strong>na přenositelnost údajů</strong> (čl. 20 GDPR),"
+    en: "<strong>of data portability</strong> (Art. 20 GDPR),"
+
+  li_objection_html:
+    cs: "<strong>vznést námitku</strong> proti zpracování (čl. 21 GDPR),"
+    en: "<strong>to object</strong> to processing (Art. 21 GDPR),"
+
+  li_withdraw_html:
+    cs: "<strong>odvolat souhlas</strong> kdykoli bez uvedení důvodu – odvolání souhlasu nemá vliv na zákonnost zpracování před jeho odvoláním."
+    en: "<strong>to withdraw consent</strong> at any time without giving reasons – withdrawal of consent does not affect the lawfulness of processing carried out before the withdrawal."
+
+  # ⚠ HTML — keep <a href="mailto:...">
+  p_exercise_html:
+    cs: "Svá práva uplatňujte e-mailem na adrese <a href=\"mailto:stojimesuniverzitami@gmail.com\">stojimesuniverzitami@gmail.com</a>. Na vaši žádost odpovíme bez zbytečného odkladu, nejpozději do 30 dnů."
+    en: "You may exercise your rights by email at <a href=\"mailto:stojimesuniverzitami@gmail.com\">stojimesuniverzitami@gmail.com</a>. We will respond to your request without undue delay, within 30 days at the latest."
+
+  # ⚠ HTML — keep <a href="...">
+  p_supervisory_html:
+    cs: "Máte rovněž právo podat stížnost u dozorového úřadu –\n            <a href=\"https://www.uoou.cz\" target=\"_blank\" rel=\"noopener\">Úřadu pro ochranu osobních údajů (ÚOOÚ)</a>."
+    en: "You also have the right to lodge a complaint with the supervisory authority –\n            the <a href=\"https://www.uoou.cz\" target=\"_blank\" rel=\"noopener\">Office for Personal Data Protection (ÚOOÚ)</a>."
+
+  h2_7:
+    cs: "7. Zabezpečení"
+    en: "7. Security"
+
+  p_security:
+    cs: "Přijímáme přiměřená technická a organizační opatření k ochraně vašich osobních údajů před neoprávněným přístupem, ztrátou nebo zneužitím. Komunikace se serverem je šifrována prostřednictvím protokolu HTTPS."
+    en: "We take appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or misuse. Communication with the server is encrypted via the HTTPS protocol."
+
+  h2_8:
+    cs: "8. Změny těchto zásad"
+    en: "8. Changes to this policy"
+
+  # ⚠ HTML — keep <strong>
+  p_changes_html:
+    cs: "Tyto zásady mohou být příležitostně aktualizovány. Aktuální verze je vždy dostupná na této stránce. Datum poslední aktualizace: <strong>27. 04. 2026</strong>."
+    en: "This policy may be updated occasionally. The current version is always available on this page. Date of last update: <strong>27 April 2026</strong>."
