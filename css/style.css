@@ -103,7 +103,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text);
 }
 
-.nav__brand img { height: 28px; width: auto; flex-shrink: 0; }
+.nav__brand img { height: 45px; width: auto; flex-shrink: 0; }
 
 .nav__brand:hover { color: var(--accent); text-decoration: none; }
 
